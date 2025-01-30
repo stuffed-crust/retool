@@ -29,7 +29,7 @@
     <Container
       id="tabbedContainer1"
       currentViewKey="{{ self.viewKeys[0] }}"
-      disabled="{{current_user.groups.map(group => group.name).includes('Marketing')}}"
+      disabled="{{current_user.groups.map(group => group.name).includes('Publicity')}}"
       footerPadding="4px 12px"
       headerPadding="4px 12px"
       padding="12px"
