@@ -17,21 +17,23 @@
     defaultFont={{ size: "12px", fontWeight: "400", fontId: "5bfcc568" }}
     fontIds={["5bfcc568"]}
     fontMap={{
-      "5bfcc568": {
-        name: "Poppins",
-        source:
-          "https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900",
-        fontWeights: [
-          "100",
-          "200",
-          "300",
-          "400",
-          "500",
-          "600",
-          "700",
-          "800",
-          "900",
-        ],
+      map: {
+        "5bfcc568": {
+          name: "Poppins",
+          source:
+            "https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900",
+          fontWeights: [
+            "100",
+            "200",
+            "300",
+            "400",
+            "500",
+            "600",
+            "700",
+            "800",
+            "900",
+          ],
+        },
       },
     }}
     h1Font={{ size: "36px", fontWeight: "700", fontId: "5bfcc568" }}
