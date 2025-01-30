@@ -14,13 +14,13 @@
     heightType="fixed"
     horizontalAlign="center"
     retoolStorageFileId="71188a27-f86f-40e8-a69a-f489c9334c79"
-    srcType="retoolStorageFileId"
     style={{ ordered: [{ grayscale: "80%" }] }}
   />
   <ButtonGroup2
     id="buttonGroup1"
     alignment="right"
     heightType="auto"
+    hidden=""
     overflowMode="wrap"
     overflowPosition={3}
     style={{

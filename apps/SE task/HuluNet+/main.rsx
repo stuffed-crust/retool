@@ -1,6 +1,4 @@
 <App>
-  <Include src="./src/home.rsx" />
-  <Include src="./src/metrics.rsx" />
   <CustomAppTheme
     id="$appTheme"
     _migrated={true}
@@ -59,6 +57,8 @@
     warning="#cd6f00"
   />
   <Include src="./src/asset_detail.rsx" />
+  <Include src="./src/home.rsx" />
+  <Include src="./src/metrics.rsx" />
   <Include src="./src/order_new_assets.rsx" />
   <Include src="./header.rsx" />
 </App>
