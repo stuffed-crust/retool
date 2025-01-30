@@ -161,7 +161,7 @@
         event="submit"
         method="trigger"
         params={{ ordered: [] }}
-        pluginId="orderSubmit"
+        pluginId="getMaxId"
         type="datasource"
         waitMs="0"
         waitType="debounce"

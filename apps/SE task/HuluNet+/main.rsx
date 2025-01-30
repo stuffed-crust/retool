@@ -15,6 +15,7 @@
     canvas="#333333"
     danger="#dc2626"
     defaultFont={{ size: "12px", fontWeight: "400", fontId: "5bfcc568" }}
+    defaultFontId="5bfcc568"
     fontIds={["5bfcc568"]}
     fontMap={{
       "5bfcc568": {

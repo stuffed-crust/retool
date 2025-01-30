@@ -14,7 +14,8 @@
     heightType="fixed"
     horizontalAlign="center"
     retoolStorageFileId="71188a27-f86f-40e8-a69a-f489c9334c79"
-    style={{ ordered: [{ grayscale: "80%" }] }}
+    srcType="retoolStorageFileId"
+    style={{ ordered: [{ grayscale: "20%" }] }}
   />
   <ButtonGroup2
     id="buttonGroup1"
@@ -26,7 +27,7 @@
     style={{
       borderRadius: "8px",
       fontSize: "11px",
-      fontWeight: "400",
+      fontWeight: "500",
       fontFamily: "Poppins",
     }}
   >
@@ -60,7 +61,7 @@
     src="{{ current_user.profilePhotoUrl }}"
     style={{
       ordered: [
-        { background: "rgba(242, 242, 242, 1)" },
+        { background: "rgba(53, 50, 50, 1)" },
         { requiredIndicator: "tertiary" },
         { sharedLabel: "primary" },
         { sharedLabelFontSize: "11px" },
