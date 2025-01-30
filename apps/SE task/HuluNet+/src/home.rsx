@@ -89,6 +89,7 @@
     sticky={null}
     type="main"
   >
+    <Include src="./container2.rsx" />
     <Container
       id="chartGraphContainer"
       footerPadding="4px 12px"
@@ -126,13 +127,6 @@
         />
       </View>
     </Container>
-    <Include src="./container2.rsx" />
-    <Text
-      id="text8"
-      horizontalAlign="right"
-      value="_Fullfilment team will be notified for approvals of new orders_"
-      verticalAlign="center"
-    />
     <Text
       id="tableTitle2"
       horizontalAlign="center"
@@ -144,6 +138,12 @@
         ],
       }}
       value="Order New Asset"
+      verticalAlign="center"
+    />
+    <Text
+      id="text8"
+      horizontalAlign="right"
+      value="_Fullfilment team will be notified for approvals of new orders_"
       verticalAlign="center"
     />
     <Button
