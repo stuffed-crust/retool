@@ -1,2 +1,4 @@
-SELECT media
-FROM asset_library;
+select
+  *
+from
+  asset_orders
