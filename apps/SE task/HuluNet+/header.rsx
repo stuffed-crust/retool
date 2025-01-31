@@ -13,6 +13,7 @@
     fit="contain"
     heightType="fixed"
     horizontalAlign="center"
+    margin="0"
     retoolStorageFileId="71188a27-f86f-40e8-a69a-f489c9334c79"
     srcType="retoolStorageFileId"
     style={{ ordered: [{ grayscale: "20%" }] }}
@@ -73,6 +74,7 @@
     label="{{ current_user.fullName }}"
     labelAlign="right"
     labelCaption="{{ current_user.email }}"
+    labelPosition="left"
     src="{{ current_user.profilePhotoUrl }}"
     style={{
       ordered: [

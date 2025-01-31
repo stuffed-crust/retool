@@ -42,7 +42,7 @@
   "button2": {
     "container": "group1",
     "subcontainer": "5344a",
-    "row": 20.8,
+    "row": 1,
     "height": 0.8,
     "width": 4,
     "stackPosition": {
@@ -93,7 +93,7 @@
   },
   "clearFiltersButton": {
     "subcontainer": "sidebarFrame1",
-    "row": 5.4,
+    "row": 2.2,
     "height": 1,
     "width": 1
   },
@@ -125,7 +125,7 @@
   },
   "contentTypeFilter": {
     "subcontainer": "sidebarFrame1",
-    "row": 3.6,
+    "row": 2,
     "height": 0.2,
     "width": 1
   },
@@ -188,9 +188,8 @@
   },
   "image1": {
     "subcontainer": "header",
-    "row": 0.2,
-    "height": 1,
-    "width": 2
+    "height": 1.2,
+    "width": 1
   },
   "image2": {
     "container": "chartGraphContainer",
@@ -292,7 +291,7 @@
   "spacer1": {
     "container": "group1",
     "subcontainer": "5344a",
-    "row": 22.2,
+    "row": 2.4,
     "height": 0.2,
     "width": 5,
     "stackPosition": {
@@ -350,7 +349,7 @@
   "tableTitle2": {
     "container": "group1",
     "subcontainer": "5344a",
-    "row": 20.8,
+    "row": 1,
     "col": 4,
     "height": 0.6,
     "width": 4,
@@ -372,9 +371,8 @@
   "text10": {
     "container": "chartGraphContainer",
     "subcontainer": "a80e4",
-    "col": 2,
     "height": 0.6,
-    "width": 9,
+    "width": 12,
     "stackPosition": {
       "object": {
         "ordinal": 1,
@@ -410,7 +408,7 @@
   "text8": {
     "container": "group1",
     "subcontainer": "5344a",
-    "row": 21.6,
+    "row": 1.8,
     "height": 0.6,
     "width": 5,
     "stackPosition": {

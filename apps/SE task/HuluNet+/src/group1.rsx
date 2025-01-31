@@ -37,7 +37,7 @@
               { fontFamily: "Poppins" },
             ],
           }}
-          value="Current Assets"
+          value="Current Assets 🔎"
           verticalAlign="center"
         />
         <TextInput
@@ -83,7 +83,7 @@
             label="ID"
             placeholder="Enter value"
             position="center"
-            size={27.4375}
+            size={29.28125}
             summaryAggregationMode="none"
           />
           <Column
@@ -95,7 +95,7 @@
             label="Name"
             placeholder="Enter value"
             position="center"
-            size={193.53125}
+            size={186.390625}
             summaryAggregationMode="none"
           />
           <Column
@@ -108,7 +108,7 @@
             label="Type"
             placeholder="Select option"
             position="center"
-            size={136.640625}
+            size={132.796875}
             summaryAggregationMode="none"
             valueOverride="{{ _.startCase(item) }}"
           />
@@ -126,7 +126,7 @@
             label="Media"
             placeholder="Enter value"
             position="center"
-            size={652}
+            size={868}
             summaryAggregationMode="none"
             textColor="rgba(255, 255, 255, 1)"
           />
@@ -139,7 +139,7 @@
             label="Description"
             placeholder="Enter value"
             position="center"
-            size={422.578125}
+            size={399.859375}
             summaryAggregationMode="none"
           />
           <Column
@@ -152,7 +152,7 @@
             label="Language"
             placeholder="Select option"
             position="center"
-            size={81.40625}
+            size={76.96875}
             summaryAggregationMode="none"
             valueOverride="{{ _.startCase(item) }}"
           />
@@ -166,7 +166,7 @@
             label="Country"
             placeholder="Select option"
             position="center"
-            size={88.15625}
+            size={83.03125}
             summaryAggregationMode="none"
             valueOverride="{{ _.startCase(item) }}"
           />
@@ -181,7 +181,7 @@
             label="Spend"
             placeholder="Enter value"
             position="center"
-            size={64.484375}
+            size={65.609375}
             summaryAggregationMode="none"
           />
           <ToolbarButton
@@ -234,7 +234,7 @@
           horizontalAlign="center"
           style={{
             ordered: [
-              { fontSize: "22px" },
+              { fontSize: "15px" },
               { fontWeight: "500" },
               { fontFamily: "Poppins" },
             ],
@@ -251,6 +251,40 @@
         />
       </View>
     </Container>
+    <Button
+      id="button2"
+      style={{ ordered: [{ background: "surfaceSecondaryBorder" }] }}
+      text="Order Now"
+    >
+      <Event
+        event="click"
+        method="show"
+        params={{ ordered: [] }}
+        pluginId="modalFrame1"
+        type="widget"
+        waitMs="0"
+        waitType="debounce"
+      />
+    </Button>
+    <Text
+      id="tableTitle2"
+      imageWidth="fill"
+      style={{
+        ordered: [
+          { fontSize: "h4Font" },
+          { fontWeight: "h4Font" },
+          { fontFamily: "h4Font" },
+        ],
+      }}
+      value="  Order Your Next Asset  🖨️  "
+    />
+    <Text
+      id="text8"
+      margin="0"
+      value="_Fullfilment team will be notified for approvals_"
+      verticalAlign="center"
+    />
+    <Spacer id="spacer1" />
     <Chat
       id="chat1"
       _actionDisabled={{ ordered: [{ "1a": "" }] }}
@@ -329,39 +363,5 @@
         waitType="debounce"
       />
     </Chat>
-    <Button
-      id="button2"
-      style={{ ordered: [{ background: "surfaceSecondaryBorder" }] }}
-      text="Order Now"
-    >
-      <Event
-        event="click"
-        method="show"
-        params={{ ordered: [] }}
-        pluginId="modalFrame1"
-        type="widget"
-        waitMs="0"
-        waitType="debounce"
-      />
-    </Button>
-    <Text
-      id="tableTitle2"
-      imageWidth="fill"
-      style={{
-        ordered: [
-          { fontSize: "h4Font" },
-          { fontWeight: "h4Font" },
-          { fontFamily: "h4Font" },
-        ],
-      }}
-      value="  Order Your Next Asset  🖨️  "
-    />
-    <Text
-      id="text8"
-      margin="0"
-      value="_Fullfilment team will be notified for approvals_"
-      verticalAlign="center"
-    />
-    <Spacer id="spacer1" />
   </View>
 </Container>
