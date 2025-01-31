@@ -13,124 +13,23 @@
     <Text id="text3" value="Filters" verticalAlign="center" />
   </Header>
   <Body>
-    <Text
-      id="text4"
-      disableMarkdown={true}
-      horizontalAlign="center"
-      style={{
-        ordered: [
-          { fontSize: "18px" },
-          { fontWeight: "500" },
-          { fontFamily: "Poppins" },
-        ],
-      }}
-      tooltipText="I chose a few specific demographics here to demostrate filtering capabilities!"
-      value="Filter Assets"
-      verticalAlign="center"
-    />
-    <DateRange
-      id="dateRangeFilter"
-      dateFormat="MMM d, yyyy"
-      endPlaceholder="End date"
-      iconBefore="bold/interface-calendar-remove"
-      label="Date Range"
-      labelPosition="top"
-      startPlaceholder="Start date"
-      textBetween="-"
-      value={{ ordered: [{ start: "May 1,2024" }, { end: "Dec 1, 2100" }] }}
-    >
-      <Event
-        event="change"
-        method="setFilterStack"
-        params={{
-          ordered: [
-            {
-              filterStack: {
-                ordered: [
-                  {
-                    filters:
-                      '[\n    { columnId: "timestamp", operator: "isAfter", value: {{ self.value.start}} },\n    { columnId: "timestamp", operator: "isBefore", value: {{ self.value.end}} },\n]',
-                  },
-                  { operator: "and" },
-                ],
-              },
-            },
-          ],
-        }}
-        pluginId="HuluAssetDataTable"
-        type="widget"
-        waitMs="0"
-        waitType="debounce"
-      />
-      <Event
-        event="change"
-        method="trigger"
-        params={{
-          ordered: [
-            {
-              options: {
-                object: {
-                  onSuccess: null,
-                  onFailure: null,
-                  additionalScope: null,
-                },
-              },
-            },
-          ],
-        }}
-        pluginId="filterAllData"
-        type="datasource"
-        waitMs="0"
-        waitType="debounce"
-      />
-    </DateRange>
     <Multiselect
       id="assetTypeFilter"
       colorByIndex=""
-      data="{{ getAssets.data }}"
+      data="{{ getType.data }}"
       emptyMessage="No options"
-      label="Asset Type"
+      label="Filter Type"
       labelPosition="top"
-      labels="{{ item.name }}"
+      labels=""
       overlayMaxHeight={375}
       persistSearchTerm={true}
       placeholder="Select options"
       showSelectionIndicator={true}
       value="All"
-      values="{{ item.id }}"
+      values="{{ i }}"
       wrapTags={true}
     >
-      <Event
-        event="change"
-        method="trigger"
-        params={{ ordered: [] }}
-        pluginId="filterAllData"
-        type="datasource"
-        waitMs="0"
-        waitType="debounce"
-      />
-      <Event
-        event="change"
-        method="setFilter"
-        params={{
-          ordered: [
-            {
-              filter: {
-                ordered: [
-                  { id: "{{ self.id }}" },
-                  { columnId: "preferred_genre" },
-                  { operator: "isOneOf" },
-                  { value: "{{ self.value }}" },
-                ],
-              },
-            },
-          ],
-        }}
-        pluginId="HuluAssetDataTable"
-        type="widget"
-        waitMs="0"
-        waitType="debounce"
-      />
+      <Option id="25587" disabled={false} hidden={false} value="Option 1" />
     </Multiselect>
     <Select
       id="contentTypeFilter"

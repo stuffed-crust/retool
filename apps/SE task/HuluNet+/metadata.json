@@ -3,7 +3,6 @@
   "version": "43.0.9",
   "pageUuid": "247f6602-da46-11ef-95ca-f3b5ffd10bda",
   "appTemplate": {
-    "appMaxWidth": "90%",
     "appThemeId": "custom",
     "pageCodeFolders": {
       "object": {
