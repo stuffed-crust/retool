@@ -8,7 +8,7 @@
 >
   <Frame
     id="$main3"
-    enableFullBleed={false}
+    enableFullBleed={true}
     isHiddenOnDesktop={false}
     isHiddenOnMobile={false}
     padding="8px 12px"

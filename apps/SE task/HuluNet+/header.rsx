@@ -3,7 +3,7 @@
   enableFullBleed={null}
   isHiddenOnDesktop={false}
   isHiddenOnMobile={true}
-  padding="2px 6px"
+  padding="8px 12px"
   sticky={true}
   style={{ ordered: [{ "primary-surface": "#1ce783" }] }}
   type="header"
@@ -16,7 +16,22 @@
     retoolStorageFileId="71188a27-f86f-40e8-a69a-f489c9334c79"
     srcType="retoolStorageFileId"
     style={{ ordered: [{ grayscale: "20%" }] }}
-  />
+  >
+    <Event
+      event="click"
+      method="openPage"
+      params={{
+        ordered: [
+          { options: { ordered: [{ passDataWith: "urlParams" }] } },
+          { pageName: "home" },
+        ],
+      }}
+      pluginId=""
+      type="util"
+      waitMs="0"
+      waitType="debounce"
+    />
+  </Image>
   <ButtonGroup2
     id="buttonGroup1"
     alignment="right"
