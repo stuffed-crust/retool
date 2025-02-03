@@ -47,7 +47,22 @@
       fontFamily: "Poppins",
     }}
   >
-    <ButtonGroup2-Button id="4c845" styleVariant="solid" text="Manage Assets" />
+    <ButtonGroup2-Button id="4c845" styleVariant="solid" text="Manage Assets">
+      <Event
+        event="click"
+        method="openPage"
+        params={{
+          ordered: [
+            { options: { ordered: [{ passDataWith: "urlParams" }] } },
+            { pageName: "asset_detail" },
+          ],
+        }}
+        pluginId=""
+        type="util"
+        waitMs="0"
+        waitType="debounce"
+      />
+    </ButtonGroup2-Button>
     <ButtonGroup2-Button id="d255a" styleVariant="solid" text="Insights">
       <Event
         event="click"

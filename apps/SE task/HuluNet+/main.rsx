@@ -1,4 +1,5 @@
 <App>
+  <Include src="./functions.rsx" />
   <CustomAppTheme
     id="$appTheme"
     _migrated={true}

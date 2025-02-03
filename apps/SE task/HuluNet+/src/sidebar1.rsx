@@ -5,7 +5,7 @@
   isHiddenOnMobile={true}
   padding="8px 12px"
   style={{
-    ordered: [{ background: "tertiary" }, { headerBackground: "success" }],
+    ordered: [{ background: "primary" }, { headerBackground: "success" }],
   }}
   width="medium"
 >
@@ -14,10 +14,11 @@
   </Header>
   <Body>
     <Multiselect
-      id="assetTypeFilter"
+      id="multiselect1"
       colorByIndex=""
-      data="{{ getType.data }}"
+      data="{{ getAssets.data }}"
       emptyMessage="No options"
+      iconByIndex={'{{  "/icon:bold/interface-add-1"  }}'}
       label="Filter Type"
       labelPosition="top"
       labels=""
@@ -25,56 +26,12 @@
       persistSearchTerm={true}
       placeholder="Select options"
       showSelectionIndicator={true}
-      value="All"
-      values="{{ i }}"
+      value="{{ HuluAssetDataTable.data.type}}"
+      values="{{ item.type }}"
       wrapTags={true}
     >
       <Option id="25587" disabled={false} hidden={false} value="Option 1" />
     </Multiselect>
-    <Select
-      id="contentTypeFilter"
-      data=""
-      emptyMessage="No options"
-      label="Content Type"
-      labelPosition="top"
-      overlayMaxHeight={375}
-      placeholder="Select an option"
-      showSelectionIndicator={true}
-      value=""
-      values="{{ item.content_type }}"
-    >
-      <Event
-        event="change"
-        method="setFilter"
-        params={{
-          ordered: [
-            {
-              filter: {
-                ordered: [
-                  { id: "{{ self.id }}" },
-                  { columnId: "content_type" },
-                  { operator: "is" },
-                  { value: "{{ self.value }}" },
-                ],
-              },
-            },
-          ],
-        }}
-        pluginId="HuluAssetDataTable"
-        type="widget"
-        waitMs="0"
-        waitType="debounce"
-      />
-      <Event
-        event="change"
-        method="trigger"
-        params={{ ordered: [] }}
-        pluginId="filterAllData"
-        type="datasource"
-        waitMs="0"
-        waitType="debounce"
-      />
-    </Select>
     <Button
       id="clearFiltersButton"
       style={{ ordered: [] }}
@@ -94,7 +51,7 @@
         event="click"
         method="clearValue"
         params={{ ordered: [] }}
-        pluginId="assetTypeFilter"
+        pluginId="multiselect1"
         type="widget"
         waitMs="0"
         waitType="debounce"

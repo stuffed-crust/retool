@@ -38,7 +38,7 @@
       id="form1"
       footerPadding="4px 12px"
       headerPadding="4px 12px"
-      initialData="{{ HuluAssetDataTable.selectedRow }}"
+      initialData="{{ table2.data }}"
       padding="12px"
       requireValidation={true}
       resetAfterSubmit={true}
@@ -75,6 +75,7 @@
           placeholder="Select an option"
           required={true}
           showSelectionIndicator={true}
+          value="media"
           values={null}
         >
           <Option id="a5330" value="Option 1" />
@@ -88,7 +89,6 @@
           labelPosition="top"
           patternType="url"
           placeholder="retool.com"
-          required={true}
           textBefore="https://"
         />
         <TextInput
@@ -97,7 +97,6 @@
           label="Description"
           labelPosition="top"
           placeholder="Enter value"
-          required={true}
         />
         <Select
           id="select2"
@@ -111,6 +110,7 @@
           placeholder="Select an option"
           required={true}
           showSelectionIndicator={true}
+          value="test"
           values={null}
         >
           <Option id="d087c" value="Option 1" />
@@ -129,6 +129,7 @@
           placeholder="Select an option"
           required={true}
           showSelectionIndicator={true}
+          value="test"
           values={null}
         >
           <Option id="f8f06" value="Option 1" />
