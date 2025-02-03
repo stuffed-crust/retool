@@ -14,9 +14,9 @@
     warningCodes={[]}
   />
   <SqlQueryUnified
-    id="getAssetMedia"
+    id="getAssetOrders"
     notificationDuration={4.5}
-    query={include("../lib/getAssetMedia.sql", "string")}
+    query={include("../lib/getAssetOrders.sql", "string")}
     resourceDisplayName="retool_db"
     resourceName="9d12bf10-436a-415e-8f23-63bb2953ef08"
     showSuccessToaster={false}
@@ -28,9 +28,10 @@
     id="orderSubmit"
     actionType="INSERT"
     changeset={
-      '[{"key":"description","value":"{{ textInput4.value }}"},{"key":"id","value":"{{ getMaxId.data.new_id[0]}}"}]'
+      '[{"key":"description","value":"{{ textInput5.value }}"},{"key":"id","value":"{{ getMaxId.data.new_id[0]}}"},{"key":"order_type","value":"{{select4.value}}"},{"key":"status","value":"{{select5.value }}"},{"key":"deadline","value":"{{date1.value }}"},{"key":"ordered_by","value":"{{select4.value }}"},{"key":"date","value":"{{ dateTime1.value }}"}]'
     }
     editorMode="gui"
+    enableTransformer={true}
     filterBy={'[{"key":"id","value":"1","operation":"="}]'}
     isMultiplayerEdited={false}
     notificationDuration={4.5}
@@ -77,7 +78,7 @@
     id="chat1_query1"
     action="chatResponseGeneration"
     chatHistory="{{ chat1.messageHistory }}"
-    chatInput="{{ chat1.lastMessage }} extract all information from {{ getAssetMedia.data }} and {{getAssets.data }} to give an answer"
+    chatInput="{{ chat1.lastMessage }} use {{getAssets.data }} to answer any question asked with the value"
     defaultModelInitialized={true}
     isMultiplayerEdited={false}
     resourceDisplayName="retool_ai"
@@ -95,6 +96,7 @@
     warningCodes={[]}
   />
   <Include src="./modalFrame1.rsx" />
+  <Include src="./modalFrame2.rsx" />
   <Include src="./sidebar1.rsx" />
   <Include src="./userTaskModal.rsx" />
   <Frame
@@ -122,6 +124,135 @@
       }}
       text="Planning & Orders"
     />
-    <Include src="./group1.rsx" />
+    <Container
+      id="group1"
+      footerPadding="4px 12px"
+      headerPadding="4px 12px"
+      margin="0"
+      padding="0"
+      showBody={true}
+      showBorder={false}
+      style={{ ordered: [{ background: "rgba(186, 185, 185, 0)" }] }}
+    >
+      <View id="5344a" viewKey="View 1">
+        <Container
+          id="chartGraphContainer"
+          footerPadding="4px 12px"
+          headerPadding="4px 12px"
+          heightType="fixed"
+          padding="12px"
+          showBody={true}
+          showHeader={true}
+          style={{ ordered: [{ borderRadius: "20px" }] }}
+          styleContext={{ ordered: [{ borderRadius: "20px" }] }}
+        >
+          <Header>
+            <Text id="containerTitle1" value="#### " verticalAlign="center" />
+          </Header>
+          <View id="a80e4" viewKey="View 1">
+            <Text
+              id="text10"
+              horizontalAlign="center"
+              style={{
+                ordered: [
+                  { fontSize: "15px" },
+                  { fontWeight: "500" },
+                  { fontFamily: "Poppins" },
+                ],
+              }}
+              value="{{ HuluAssetDataTable.selectedRow.name }}"
+              verticalAlign="center"
+            />
+            <Image
+              id="image2"
+              fit="contain"
+              horizontalAlign="center"
+              retoolFileObject="{{ HuluAssetDataTable.selectedRow.media }}"
+              src=" {{ HuluAssetDataTable.selectedRow.media }}"
+            />
+          </View>
+        </Container>
+        <Include src="./container2.rsx" />
+        <Spacer id="spacer1" />
+        <Chat
+          id="chat1"
+          _actionDisabled={{ ordered: [{ "1a": "" }] }}
+          _actionHidden={{ ordered: [{ "1a": "" }] }}
+          _actionIcon={{ ordered: [{ "1a": "line/interface-align-front" }] }}
+          _actionIds={["1a"]}
+          _actionLabel={{ ordered: [{ "1a": "Copy" }] }}
+          _actionType={{ ordered: [{ "1a": "copy" }] }}
+          _defaultUsername="{{ current_user.fullName }}"
+          _headerButtonHidden={{ ordered: [{ "2b": "" }, { "3c": "" }] }}
+          _headerButtonIcon={{
+            ordered: [
+              { "2b": "line/interface-download-button-2" },
+              { "3c": "line/interface-delete-bin-2" },
+            ],
+          }}
+          _headerButtonIds={["2b", "3c"]}
+          _headerButtonLabel={{
+            ordered: [{ "2b": "Download" }, { "3c": "Clear history" }],
+          }}
+          _headerButtonType={{
+            ordered: [{ "2b": "download" }, { "3c": "clearHistory" }],
+          }}
+          _sessionStorageId="9ce60f51-dc56-4103-844d-b2662a520ae7"
+          assistantName="HU"
+          avatarFallback="{{ current_user.fullName }}"
+          avatarImageSize={32}
+          avatarSrc="{{ current_user.profilePhotoUrl }}"
+          emptyDescription="Send a message to chat with AI"
+          emptyTitle="No messages here yet"
+          placeholder="Ask me a question Marketing & Publicity!"
+          queryTargetId="chat1_query1"
+          showAvatar={true}
+          showEmptyState={true}
+          showHeader={true}
+          showTimestamp={true}
+          style={{
+            ordered: [
+              { background: "automatic" },
+              { containerBorderRadius: "22px" },
+              { message: "#ffffffff" },
+              { inputBorderRadius: "20px" },
+              { containerBackground: "tertiary" },
+              { send: "rgba(83, 230, 111, 1)" },
+              { name: "rgba(249, 255, 249, 1)" },
+            ],
+          }}
+          title="❇️ Hulu CoPilot"
+        >
+          <Event
+            event="clickAction"
+            method="copyToClipboard"
+            params={{ ordered: [{ value: "{{ currentMessage.value }}" }] }}
+            pluginId="chat1"
+            targetId="1a"
+            type="util"
+            waitMs="0"
+            waitType="debounce"
+          />
+          <Event
+            event="clickHeader"
+            method="exportData"
+            pluginId="chat1"
+            targetId="2b"
+            type="widget"
+            waitMs="0"
+            waitType="debounce"
+          />
+          <Event
+            event="clickHeader"
+            method="clearHistory"
+            pluginId="chat1"
+            targetId="3c"
+            type="widget"
+            waitMs="0"
+            waitType="debounce"
+          />
+        </Chat>
+      </View>
+    </Container>
   </Frame>
 </Screen>
