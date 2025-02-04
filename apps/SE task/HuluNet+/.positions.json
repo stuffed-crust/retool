@@ -49,6 +49,13 @@
       }
     }
   },
+  "button3": {
+    "subcontainer": "splitPaneFrame1",
+    "row": 15,
+    "col": 2,
+    "height": 1.2,
+    "width": 7
+  },
   "buttonGroup1": {
     "subcontainer": "header",
     "row": 0.2,
@@ -121,6 +128,19 @@
       }
     }
   },
+  "container4": {
+    "row": 1.2,
+    "height": 15,
+    "width": 12,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
   "containerTitle1": {
     "container": "chartGraphContainer",
     "rowGroup": "header",
@@ -137,6 +157,12 @@
     "container": "container3",
     "rowGroup": "header",
     "subcontainer": "4664d",
+    "height": 0.6,
+    "width": 12
+  },
+  "containerTitle4": {
+    "container": "container4",
+    "rowGroup": "header",
     "height": 0.6,
     "width": 12
   },
@@ -173,18 +199,6 @@
       }
     }
   },
-  "form1": {
-    "subcontainer": "modalFrame1",
-    "width": 12,
-    "stackPosition": {
-      "object": {
-        "ordinal": 0,
-        "widthType": "fixed",
-        "width": 0,
-        "height": 0
-      }
-    }
-  },
   "form2": {
     "subcontainer": "modalFrame2",
     "width": 12,
@@ -197,25 +211,12 @@
       }
     }
   },
-  "formButton1": {
-    "container": "form1",
-    "rowGroup": "footer",
-    "col": 8,
-    "height": 1,
-    "width": 4
-  },
   "formButton2": {
     "container": "form2",
     "rowGroup": "footer",
     "col": 8,
     "height": 1,
     "width": 4
-  },
-  "formTitle1": {
-    "container": "form1",
-    "rowGroup": "header",
-    "height": 0.6,
-    "width": 12
   },
   "group1": {
     "row": 1.4,
@@ -303,12 +304,6 @@
     "col": 9,
     "height": 1
   },
-  "modalCloseButton2": {
-    "rowGroup": "header",
-    "subcontainer": "modalFrame1",
-    "col": 9,
-    "height": 1
-  },
   "modalCloseButton3": {
     "rowGroup": "header",
     "subcontainer": "modalFrame2",
@@ -318,12 +313,6 @@
   "modalTitle1": {
     "rowGroup": "header",
     "subcontainer": "userTaskModal",
-    "height": 0.6,
-    "width": 9
-  },
-  "modalTitle2": {
-    "rowGroup": "header",
-    "subcontainer": "modalFrame1",
     "height": 0.6,
     "width": 9
   },
@@ -339,32 +328,8 @@
     "height": 0.2,
     "width": 1
   },
-  "numberInput2": {
-    "container": "form1",
-    "row": 3,
-    "height": 0.2,
-    "width": 12
-  },
   "numberInput3": {
     "container": "form2",
-    "height": 0.2,
-    "width": 12
-  },
-  "select1": {
-    "container": "form1",
-    "row": 2,
-    "height": 0.2,
-    "width": 12
-  },
-  "select2": {
-    "container": "form1",
-    "row": 2.6,
-    "height": 0.2,
-    "width": 12
-  },
-  "select3": {
-    "container": "form1",
-    "row": 2.8,
     "height": 0.2,
     "width": 12
   },
@@ -438,12 +403,6 @@
       }
     }
   },
-  "table1": {
-    "row": 2.2,
-    "col": 1,
-    "height": 8,
-    "width": 8
-  },
   "table2": {
     "container": "container3",
     "subcontainer": "4664d",
@@ -452,6 +411,21 @@
     "stackPosition": {
       "object": {
         "ordinal": 1,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "table3": {
+    "container": "container4",
+    "subcontainer": "e793c",
+    "row": 0,
+    "height": 13,
+    "width": 12,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
         "widthType": "fixed",
         "width": 0,
         "height": 0
@@ -552,24 +526,6 @@
         "height": 0
       }
     }
-  },
-  "textInput2": {
-    "container": "form1",
-    "row": 1.8,
-    "height": 0.2,
-    "width": 12
-  },
-  "textInput3": {
-    "container": "form1",
-    "row": 2.2,
-    "height": 0.2,
-    "width": 12
-  },
-  "textInput4": {
-    "container": "form1",
-    "row": 2.4,
-    "height": 0.2,
-    "width": 12
   },
   "textInput5": {
     "container": "form2",
