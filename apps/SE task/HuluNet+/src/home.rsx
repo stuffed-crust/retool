@@ -95,7 +95,6 @@
     updateSetValueDynamically={true}
     warningCodes={[]}
   />
-  <Include src="./modalFrame1.rsx" />
   <Include src="./modalFrame2.rsx" />
   <Include src="./sidebar1.rsx" />
   <Include src="./userTaskModal.rsx" />

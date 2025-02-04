@@ -387,6 +387,15 @@
             waitMs="0"
             waitType="debounce"
           />
+          <Event
+            event="click"
+            method="confetti"
+            params={{ ordered: [] }}
+            pluginId=""
+            type="util"
+            waitMs="0"
+            waitType="debounce"
+          />
         </Button>
         <Text
           id="text8"
