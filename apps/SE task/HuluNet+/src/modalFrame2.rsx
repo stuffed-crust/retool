@@ -49,11 +49,10 @@
     >
       <Body>
         <NumberInput
-          id="numberInput3"
+          id="numberInput1"
           currency="USD"
-          formDataKey="id"
           inputValue={0}
-          label="ID"
+          label="Id"
           labelPosition="top"
           placeholder="Enter value"
           showSeparators={true}
@@ -101,23 +100,6 @@
           labelPosition="top"
           placeholder="Enter value"
         />
-        <Select
-          id="select5"
-          emptyMessage="No options"
-          formDataKey="status"
-          itemMode="static"
-          label="Status"
-          labelPosition="top"
-          labels={null}
-          overlayMaxHeight={375}
-          placeholder="Select an option"
-          showSelectionIndicator={true}
-          values={null}
-        >
-          <Option id="b266b" value="Option 1" />
-          <Option id="a9925" value="Option 2" />
-          <Option id="e9e8b" value="Option 3" />
-        </Select>
         <Date
           id="date1"
           dateFormat="MMM d, yyyy"
@@ -141,7 +123,7 @@
         event="submit"
         method="trigger"
         params={{ ordered: [] }}
-        pluginId="getMaxId"
+        pluginId="updateOrder"
         type="datasource"
         waitMs="0"
         waitType="debounce"
