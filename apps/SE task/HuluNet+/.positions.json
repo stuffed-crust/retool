@@ -50,11 +50,20 @@
     }
   },
   "button3": {
-    "subcontainer": "splitPaneFrame1",
-    "row": 15,
-    "col": 2,
-    "height": 1.2,
-    "width": 7
+    "container": "container4",
+    "subcontainer": "e793c",
+    "row": 14.4,
+    "col": 10,
+    "height": 1,
+    "width": 2,
+    "stackPosition": {
+      "object": {
+        "ordinal": 1,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
   },
   "buttonGroup1": {
     "subcontainer": "header",
@@ -130,7 +139,7 @@
   },
   "container4": {
     "row": 1.2,
-    "height": 15,
+    "height": 18.2,
     "width": 12,
     "stackPosition": {
       "object": {
@@ -174,7 +183,7 @@
   },
   "dateTime1": {
     "container": "form2",
-    "row": 0.6,
+    "row": 0.8,
     "height": 0.2,
     "width": 12
   },
@@ -202,6 +211,21 @@
   "form2": {
     "subcontainer": "modalFrame2",
     "width": 12,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "form3": {
+    "subcontainer": "splitPaneFrame1",
+    "row": 1.2,
+    "col": 1,
+    "height": 0.2,
+    "width": 8,
     "stackPosition": {
       "object": {
         "ordinal": 0,
@@ -328,22 +352,41 @@
     "height": 0.2,
     "width": 1
   },
-  "numberInput3": {
+  "numberInput1": {
     "container": "form2",
+    "row": 0.2,
     "height": 0.2,
-    "width": 12
+    "width": 4
   },
   "select4": {
     "container": "form2",
-    "row": 0.4,
+    "row": 0.6,
     "height": 0.2,
     "width": 12
   },
-  "select5": {
-    "container": "form2",
-    "row": 1,
+  "select6": {
+    "container": "form3",
+    "rowGroup": "footer",
+    "row": 0.2,
+    "col": 1,
     "height": 0.2,
-    "width": 12
+    "width": 7
+  },
+  "select7": {
+    "container": "container4",
+    "subcontainer": "e793c",
+    "row": 14,
+    "col": 1,
+    "height": 0.2,
+    "width": 9,
+    "stackPosition": {
+      "object": {
+        "ordinal": 2,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
   },
   "spacer1": {
     "container": "group1",
@@ -473,6 +516,11 @@
     "height": 0.6,
     "width": 7
   },
+  "text12": {
+    "container": "form3",
+    "height": 0.6,
+    "width": 12
+  },
   "text3": {
     "rowGroup": "header",
     "subcontainer": "sidebarFrame1",
@@ -529,13 +577,13 @@
   },
   "textInput5": {
     "container": "form2",
-    "row": 0.2,
+    "row": 0.4,
     "height": 0.2,
     "width": 12
   },
   "textInput6": {
     "container": "form2",
-    "row": 0.8,
+    "row": 1,
     "height": 0.2,
     "width": 12
   }

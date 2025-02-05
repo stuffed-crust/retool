@@ -1,1 +1,1 @@
-select * from asset_orders 
+select * from asset_orders where status = 'In Progress'

@@ -8,6 +8,7 @@
 >
   <SqlQueryUnified
     id="getAssets"
+    isHidden={false}
     query={include("../lib/getAssets.sql", "string")}
     resourceDisplayName="retool_db"
     resourceName="9d12bf10-436a-415e-8f23-63bb2953ef08"
@@ -15,6 +16,7 @@
   />
   <SqlQueryUnified
     id="getAssetOrders"
+    isHidden={false}
     notificationDuration={4.5}
     query={include("../lib/getAssetOrders.sql", "string")}
     resourceDisplayName="retool_db"
@@ -33,6 +35,7 @@
     editorMode="gui"
     enableTransformer={true}
     filterBy={'[{"key":"id","value":"1","operation":"="}]'}
+    isHidden={false}
     isMultiplayerEdited={false}
     notificationDuration={4.5}
     query={include("../lib/orderSubmit.sql", "string")}
@@ -47,6 +50,7 @@
   />
   <SqlQueryUnified
     id="getMaxId"
+    isHidden={false}
     isMultiplayerEdited={false}
     notificationDuration={4.5}
     query={include("../lib/getMaxId.sql", "string")}
@@ -68,24 +72,19 @@
     />
   </SqlQueryUnified>
   <RetoolAIQuery
-    id="query7"
-    notificationDuration={4.5}
-    resourceDisplayName="retool_ai"
-    resourceName="retool_ai"
-    showSuccessToaster={false}
-  />
-  <RetoolAIQuery
     id="chat1_query1"
     action="chatResponseGeneration"
     chatHistory="{{ chat1.messageHistory }}"
     chatInput="{{ chat1.lastMessage }} use {{getAssets.data }} to answer any question asked with the value"
     defaultModelInitialized={true}
+    isHidden={false}
     isMultiplayerEdited={false}
     resourceDisplayName="retool_ai"
     resourceName="retool_ai"
   />
   <SqlQueryUnified
     id="getType"
+    isHidden={false}
     notificationDuration={4.5}
     query={include("../lib/getType.sql", "string")}
     resourceDisplayName="retool_db"
@@ -94,6 +93,15 @@
     showUpdateSetValueDynamicallyToggle={false}
     updateSetValueDynamically={true}
     warningCodes={[]}
+  />
+  <WorkflowRun
+    id="updateOrder"
+    isHidden={false}
+    notificationDuration={4.5}
+    resourceName="WorkflowRun"
+    showSuccessToaster={false}
+    workflowId="c0ac8b5e-3ef8-48b5-8a46-34b9537848ad"
+    workflowParams={include("../lib/updateOrder.json", "string")}
   />
   <Include src="./modalFrame2.rsx" />
   <Include src="./sidebar1.rsx" />

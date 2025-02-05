@@ -9,9 +9,6 @@
         "defaultPage": {
           "array": []
         },
-        "page1": {
-          "array": []
-        },
         "dashboard": {
           "array": []
         },
@@ -21,17 +18,20 @@
         "metrics": {
           "array": []
         },
-        "order_new_assets": {
+        "home": {
           "array": []
         },
-        "home": {
+        "approvals": {
+          "array": []
+        },
+        "orderds": {
           "array": []
         }
       }
     },
     "rootScreen": "home",
     "shortlink": "hulunet",
-    "version": "3.147.0",
+    "version": "3.149.0",
     "experimentalDataTabEnabled": true
   }
 }

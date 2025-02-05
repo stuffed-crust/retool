@@ -1,5 +1,4 @@
 <App>
-  <Include src="./functions.rsx" />
   <CustomAppTheme
     id="$appTheme"
     _migrated={true}
@@ -60,6 +59,7 @@
   />
   <Include src="./src/home.rsx" />
   <Include src="./src/metrics.rsx" />
-  <Include src="./src/order_new_assets.rsx" />
+  <Include src="./src/approvals.rsx" />
+  <Include src="./src/orderds.rsx" />
   <Include src="./header.rsx" />
 </App>
