@@ -294,7 +294,7 @@
           id="select7"
           emptyMessage="No options"
           itemMode="static"
-          label="Approval"
+          label="Approval Decision"
           labelPosition="top"
           overlayMaxHeight={375}
           placeholder="Select an option"
@@ -303,7 +303,7 @@
           <Option id="73b62" value="Deny" />
           <Option id="9f823" value="Approve" />
         </Select>
-        <Button id="button3" text="Button">
+        <Button id="button3" text="Submit">
           <Event
             event="click"
             method="trigger"

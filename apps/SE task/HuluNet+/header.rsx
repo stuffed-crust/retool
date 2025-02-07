@@ -54,7 +54,7 @@
         params={{
           ordered: [
             { options: { ordered: [{ passDataWith: "urlParams" }] } },
-            { pageName: "asset_detail" },
+            { pageName: "approvals" },
           ],
         }}
         pluginId=""

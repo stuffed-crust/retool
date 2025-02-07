@@ -52,7 +52,7 @@
   "button3": {
     "container": "container4",
     "subcontainer": "e793c",
-    "row": 14.4,
+    "row": 13.8,
     "col": 10,
     "height": 1,
     "width": 2,
@@ -375,10 +375,9 @@
   "select7": {
     "container": "container4",
     "subcontainer": "e793c",
-    "row": 14,
-    "col": 1,
+    "row": 13.2,
     "height": 0.2,
-    "width": 9,
+    "width": 10,
     "stackPosition": {
       "object": {
         "ordinal": 2,
