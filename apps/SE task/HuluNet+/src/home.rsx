@@ -75,7 +75,7 @@
     id="chat1_query1"
     action="chatResponseGeneration"
     chatHistory="{{ chat1.messageHistory }}"
-    chatInput="{{ chat1.lastMessage }} use {{getAssetOrders.data }} to answer any question asked with the value"
+    chatInput="{{ chat1.lastMessage }} use {{getAssetOrders.data }} to answerr any question asked with the value"
     defaultModelInitialized={true}
     isHidden={false}
     isMultiplayerEdited={false}
