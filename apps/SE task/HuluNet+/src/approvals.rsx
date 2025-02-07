@@ -294,7 +294,7 @@
           id="select7"
           emptyMessage="No options"
           itemMode="static"
-          label="Approval Decision"
+          label="Approval"
           labelPosition="top"
           overlayMaxHeight={375}
           placeholder="Select an option"

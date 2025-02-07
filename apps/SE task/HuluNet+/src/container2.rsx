@@ -85,7 +85,7 @@
         label="ID"
         placeholder="Enter value"
         position="center"
-        size={0}
+        size={27.421875}
         summaryAggregationMode="none"
       />
       <Column
@@ -97,7 +97,7 @@
         label="Name"
         placeholder="Enter value"
         position="center"
-        size={0}
+        size={177.671875}
         summaryAggregationMode="none"
       />
       <Column
@@ -110,7 +110,7 @@
         label="Type"
         placeholder="Select option"
         position="center"
-        size={0}
+        size={139.765625}
         summaryAggregationMode="none"
         valueOverride="{{ _.startCase(item) }}"
       />
@@ -128,7 +128,7 @@
         label="Media"
         placeholder="Enter value"
         position="center"
-        size={0}
+        size={52.921875}
         summaryAggregationMode="none"
         textColor="rgba(255, 255, 255, 1)"
       />
@@ -141,7 +141,7 @@
         label="Description"
         placeholder="Enter value"
         position="center"
-        size={0}
+        size={422.375}
         summaryAggregationMode="none"
       />
       <Column
@@ -154,7 +154,7 @@
         label="Language"
         placeholder="Select option"
         position="center"
-        size={0}
+        size={81.359375}
         summaryAggregationMode="none"
         valueOverride="{{ _.startCase(item) }}"
       />
@@ -168,7 +168,7 @@
         label="Country"
         placeholder="Select option"
         position="center"
-        size={0}
+        size={88.109375}
         summaryAggregationMode="none"
         valueOverride="{{ _.startCase(item) }}"
       />
@@ -183,7 +183,7 @@
         label="Spend"
         placeholder="Enter value"
         position="center"
-        size={0}
+        size={64.453125}
         summaryAggregationMode="none"
       />
       <Action id="5186c" icon="bold/interface-edit-pencil" label="Action 1" />
