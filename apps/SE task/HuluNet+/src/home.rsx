@@ -75,10 +75,11 @@
     id="chat1_query1"
     action="chatResponseGeneration"
     chatHistory="{{ chat1.messageHistory }}"
-    chatInput="{{ chat1.lastMessage }} use {{getAssets.data }} to answer any question asked with the value"
+    chatInput="use {{ chat1.lastMessage }} to return data from {{ getAssetOrders.data }}"
     defaultModelInitialized={true}
     isHidden={false}
     isMultiplayerEdited={false}
+    model="o1"
     resourceDisplayName="retool_ai"
     resourceName="retool_ai"
   />
@@ -174,6 +175,7 @@
               id="image2"
               fit="contain"
               horizontalAlign="center"
+              margin="0"
               retoolFileObject="{{ HuluAssetDataTable.selectedRow.media }}"
               src=" {{ HuluAssetDataTable.selectedRow.media }}"
             />

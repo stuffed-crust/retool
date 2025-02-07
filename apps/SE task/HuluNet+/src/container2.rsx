@@ -226,7 +226,11 @@
       showHeader={true}
     >
       <Header>
-        <Text id="containerTitle3" value="#### Orders" verticalAlign="center" />
+        <Text
+          id="containerTitle3"
+          value="#### Recent Orders"
+          verticalAlign="center"
+        />
       </Header>
       <View id="4664d" viewKey="View 1">
         <Table
