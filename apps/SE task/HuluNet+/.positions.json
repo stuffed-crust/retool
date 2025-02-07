@@ -90,7 +90,7 @@
   "chat1": {
     "container": "group1",
     "subcontainer": "5344a",
-    "row": 6.2,
+    "row": 5.8,
     "col": 9,
     "height": 21.8,
     "stackPosition": {
@@ -104,7 +104,7 @@
   },
   "clearFiltersButton": {
     "subcontainer": "sidebarFrame1",
-    "row": 3,
+    "row": 1,
     "height": 1,
     "width": 1
   },
