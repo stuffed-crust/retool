@@ -1,0 +1,27 @@
+{
+  "toolscriptVersion": "1.0.0",
+  "version": "43.0.9",
+  "pageUuid": "cb8859e4-e802-11ef-b80f-0fd87ce23819",
+  "appTemplate": {
+    "appThemeId": "custom",
+    "pageCodeFolders": {
+      "object": {
+        "Approvals": {
+          "array": []
+        },
+        "Assets": {
+          "array": []
+        },
+        "Metrics": {
+          "array": []
+        },
+        "page1": {
+          "array": []
+        }
+      }
+    },
+    "rootScreen": "Assets",
+    "version": "3.153.0",
+    "experimentalDataTabEnabled": true
+  }
+}
