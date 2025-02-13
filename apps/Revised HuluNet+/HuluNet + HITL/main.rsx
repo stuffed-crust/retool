@@ -1,7 +1,4 @@
 <App>
-  <Include src="./src/Assets.rsx" />
-  <Include src="./src/Approvals.rsx" />
-  <Include src="./src/Metrics.rsx" />
   <CustomAppTheme
     id="$appTheme"
     _migrated={true}
@@ -50,5 +47,8 @@
     textLight="#ffffff"
     warning="#cd6f00"
   />
+  <Include src="./src/Approvals.rsx" />
+  <Include src="./src/Assets.rsx" />
+  <Include src="./src/Metrics.rsx" />
   <Include src="./header.rsx" />
 </App>

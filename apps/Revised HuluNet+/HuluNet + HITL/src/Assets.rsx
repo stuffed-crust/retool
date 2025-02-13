@@ -331,7 +331,11 @@
       styleContext={{ ordered: [{ borderRadius: "24px" }] }}
     >
       <Header>
-        <Text id="formTitle3" value="#### Order Asset" verticalAlign="center" />
+        <Text
+          id="formTitle3"
+          value="#### Order Assets"
+          verticalAlign="center"
+        />
       </Header>
       <Body>
         <NumberInput
