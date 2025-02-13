@@ -1,8 +1,0 @@
-{ "id": {{numberInput1.value}},
-  "description": {{ textInput5.value}} ,
-  "order_type": "Description of the new asset",
-    "status" : "In Progress"
-  "date": "12/12/25",
-  "ordered_by": "media_url",
-  "deadline": "12/12/12"
-}
