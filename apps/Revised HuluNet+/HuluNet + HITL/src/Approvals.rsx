@@ -16,6 +16,7 @@
 // example: return data.find(element => element.isError)
 return data.error"
     fromAppUuid="cb8859e4-e802-11ef-b80f-0fd87ce23819"
+    functionIsSync={null}
     isMultiplayerEdited={false}
     resourceName="RetoolUserAction"
     resourceTypeOverride=""
@@ -41,6 +42,7 @@ return data"
 // example: return data.find(element => element.isError)
 return data.error"
     fromAppUuid="cb8859e4-e802-11ef-b80f-0fd87ce23819"
+    functionIsSync={null}
     isMultiplayerEdited={false}
     queryDisabled="{{ urlparams.hash.userTaskId === undefined }}"
     resourceName="RetoolUserAction"
@@ -65,6 +67,7 @@ return data"
     errorTransformer="// The variable 'data' allows you to reference the request's data in the transformer. 
 // example: return data.find(element => element.isError)
 return data.error"
+    functionIsSync={null}
     outputPayload={'{ "approved": {{ select1.value}} }'}
     resourceName="RetoolUserAction"
     resourceTypeOverride=""
@@ -110,7 +113,7 @@ return data"
           id="iconText1"
           icon="bold/interface-alert-information-circle"
           style={{ ordered: [{ fontSize: "h4Font" }, { fontWeight: "700" }] }}
-          text="Approvals for Admin"
+          text="Tasks to Approve"
           textSize="h4"
         />
       </Header>
@@ -166,20 +169,6 @@ return data"
         position="center"
         size={246.859375}
         summaryAggregationMode="none"
-      />
-      <Column
-        id="7cfe8"
-        alignment="left"
-        format="tag"
-        formatOptions={{ automaticColors: true }}
-        groupAggregationMode="none"
-        key="taskName"
-        label="Task name"
-        placeholder="Select option"
-        position="center"
-        size={86.421875}
-        summaryAggregationMode="none"
-        valueOverride="{{ _.startCase(item) }}"
       />
       <Column
         id="af236"
@@ -250,13 +239,15 @@ return data"
         id="68d9c"
         alignment="left"
         format="json"
+        formatOptions={{ automaticColors: true }}
         groupAggregationMode="none"
         key="context"
         label="Task context"
         placeholder="Enter value"
         position="center"
-        size={84.609375}
+        size={289.46875}
         summaryAggregationMode="none"
+        valueOverride="{{ item.description }}"
       />
       <Column
         id="fae99"
@@ -295,19 +286,6 @@ return data"
         placeholder="Enter value"
         position="center"
         size={763.296875}
-        summaryAggregationMode="none"
-      />
-      <Column
-        id="df9dd"
-        alignment="left"
-        format="json"
-        groupAggregationMode="none"
-        hidden="false"
-        key="output"
-        label="Task output"
-        placeholder="Enter value"
-        position="center"
-        size={203.09375}
         summaryAggregationMode="none"
       />
       <Column

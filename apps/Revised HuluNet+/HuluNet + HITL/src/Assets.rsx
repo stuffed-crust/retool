@@ -8,6 +8,7 @@
 >
   <SqlQueryUnified
     id="query2"
+    functionIsSync={null}
     query={include("../lib/query2.sql", "string")}
     resourceDisplayName="retool_db"
     resourceName="9d12bf10-436a-415e-8f23-63bb2953ef08"
@@ -15,6 +16,7 @@
   />
   <WorkflowRun
     id="startTrigger"
+    functionIsSync={null}
     isMultiplayerEdited={false}
     notificationDuration={4.5}
     resourceName="WorkflowRun"
@@ -36,6 +38,7 @@
   </WorkflowRun>
   <SqlQueryUnified
     id="getMaxId"
+    functionIsSync={null}
     query={include("../lib/getMaxId.sql", "string")}
     resourceDisplayName="retool_db"
     resourceName="9d12bf10-436a-415e-8f23-63bb2953ef08"
@@ -57,6 +60,7 @@
     chatHistory="{{ chat1.messageHistory }}"
     chatInput="{{ chat1.lastMessage }} and use assets_orders"
     defaultModelInitialized={true}
+    functionIsSync={null}
     resourceDisplayName="retool_ai"
     resourceName="retool_ai"
     vectorModeEnabled={true}
@@ -383,16 +387,21 @@
           labelPosition="top"
           minLines={2}
           placeholder="Enter value"
+          value="{{ table2.selectedRow.status }}"
         />
-        <TextArea
-          id="textArea4"
-          autoResize={true}
-          formDataKey="order_type"
-          label="Order type"
+        <Select
+          id="select2"
+          emptyMessage="No options"
+          itemMode="static"
+          label="Type"
           labelPosition="top"
-          minLines={2}
-          placeholder="Enter value"
-        />
+          overlayMaxHeight={375}
+          placeholder="Select an option"
+          showSelectionIndicator={true}
+        >
+          <Option id="e4f88" value="New" />
+          <Option id="86072" value="From Existing" />
+        </Select>
         <TextArea
           id="textArea5"
           autoResize={true}
@@ -401,6 +410,7 @@
           labelPosition="top"
           minLines={2}
           placeholder="Enter value"
+          value="{{ table2.selectedRow.description }}"
         />
         <TextArea
           id="textArea6"
@@ -410,6 +420,7 @@
           labelPosition="top"
           minLines={2}
           placeholder="Enter value"
+          value="{{ current_user.email }}"
         />
       </Body>
       <Footer>
