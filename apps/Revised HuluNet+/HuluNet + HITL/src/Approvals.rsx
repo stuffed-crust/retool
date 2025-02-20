@@ -312,7 +312,7 @@ return data"
         label="ID"
         placeholder="Enter value"
         position="center"
-        size={244.453125}
+        size={250.390625}
       />
       <ToolbarButton
         id="1a"
@@ -400,6 +400,15 @@ return data"
             formatOptions={{}}
             hidden="false"
             label="Role"
+          />
+          <Property
+            id="Status"
+            editable="false"
+            editableOptions={{}}
+            format="string"
+            formatOptions={{}}
+            hidden="false"
+            label="Status"
           />
         </KeyValue>
       </View>
