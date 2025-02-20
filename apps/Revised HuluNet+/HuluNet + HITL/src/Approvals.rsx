@@ -16,7 +16,6 @@
 // example: return data.find(element => element.isError)
 return data.error"
     fromAppUuid="cb8859e4-e802-11ef-b80f-0fd87ce23819"
-    functionIsSync={null}
     isMultiplayerEdited={false}
     resourceName="RetoolUserAction"
     resourceTypeOverride=""
@@ -42,7 +41,6 @@ return data"
 // example: return data.find(element => element.isError)
 return data.error"
     fromAppUuid="cb8859e4-e802-11ef-b80f-0fd87ce23819"
-    functionIsSync={null}
     isMultiplayerEdited={false}
     queryDisabled="{{ urlparams.hash.userTaskId === undefined }}"
     resourceName="RetoolUserAction"
@@ -67,7 +65,6 @@ return data"
     errorTransformer="// The variable 'data' allows you to reference the request's data in the transformer. 
 // example: return data.find(element => element.isError)
 return data.error"
-    functionIsSync={null}
     outputPayload={'{ "approved": {{ select1.value}} }'}
     resourceName="RetoolUserAction"
     resourceTypeOverride=""
@@ -167,7 +164,7 @@ return data"
         label="ID"
         placeholder="Enter value"
         position="center"
-        size={246.859375}
+        size={247.359375}
         summaryAggregationMode="none"
       />
       <Column
@@ -245,7 +242,7 @@ return data"
         label="Task context"
         placeholder="Enter value"
         position="center"
-        size={289.46875}
+        size={685.28125}
         summaryAggregationMode="none"
         valueOverride="{{ item.description }}"
       />

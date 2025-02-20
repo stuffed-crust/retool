@@ -47,8 +47,8 @@
     textLight="#ffffff"
     warning="#cd6f00"
   />
-  <Include src="./src/Approvals.rsx" />
   <Include src="./src/Assets.rsx" />
+  <Include src="./src/Approvals.rsx" />
   <Include src="./src/Metrics.rsx" />
   <Include src="./header.rsx" />
 </App>

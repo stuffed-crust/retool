@@ -1,5 +1,4 @@
 [
-  { "key": "status", "value": "{{ textArea3.value }}" },
   { "key": "order_type", "value": "{{ select2.value }}" },
   { "key": "id", "value": "{{ getMaxId.data.max['0']+1 }}" },
   { "key": "deadline", "value": "{{ date1.value }}" },
