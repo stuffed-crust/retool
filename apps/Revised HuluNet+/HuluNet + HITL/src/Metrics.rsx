@@ -15,6 +15,11 @@
     sticky={null}
     type="main"
   >
+    <Text
+      id="text4"
+      value="👋 **Hello {{ current_user.firstName || 'friend' }}!**"
+      verticalAlign="center"
+    />
     <Chart
       id="lineChart1"
       barMode="group"
