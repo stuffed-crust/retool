@@ -392,10 +392,10 @@
           overlayMaxHeight={375}
           placeholder="Select an option"
           showSelectionIndicator={true}
-          value="From Existing"
+          value="From Existing Asset"
         >
           <Option id="e4f88" value="New" />
-          <Option id="86072" value="From Existing" />
+          <Option id="86072" value="From Existing Asset" />
         </Select>
         <Select
           id="select3"
