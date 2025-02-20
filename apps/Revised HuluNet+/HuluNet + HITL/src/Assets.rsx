@@ -239,7 +239,7 @@
             label="Description"
             placeholder="Enter value"
             position="center"
-            size={100}
+            size={430}
             summaryAggregationMode="none"
           />
           <Column
@@ -252,7 +252,7 @@
             label="Language"
             placeholder="Select option"
             position="center"
-            size={100}
+            size={165}
             summaryAggregationMode="none"
             valueOverride="{{ _.startCase(item) }}"
           />
@@ -344,7 +344,7 @@
           disabled="true"
           formDataKey="id"
           inputValue={0}
-          label="ID"
+          label="Id"
           labelPosition="top"
           placeholder="Enter value"
           required={true}
@@ -389,6 +389,19 @@
           <Option id="e4f88" value="New" />
           <Option id="86072" value="From Existing" />
         </Select>
+        <Select
+          id="select3"
+          data="{{ getAssets.data }}"
+          emptyMessage="No options"
+          label="Asset Type"
+          labelPosition="top"
+          labels="{{ item.name }}"
+          overlayMaxHeight={375}
+          placeholder="Select an option"
+          showSelectionIndicator={true}
+          value="From Existing"
+          values="{{ item.type }}"
+        />
         <TextArea
           id="textArea5"
           autoResize={true}
@@ -397,6 +410,7 @@
           labelPosition="top"
           minLines={2}
           placeholder="Enter value"
+          required={true}
           value="{{ table2.selectedRow.description }}"
         />
         <TextArea

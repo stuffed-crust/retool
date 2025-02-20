@@ -65,5 +65,20 @@
     src="https://picsum.photos/id/1025/800/600"
     srcType="retoolStorageFileId"
     style={{ ordered: [] }}
-  />
+  >
+    <Event
+      event="click"
+      method="openPage"
+      params={{
+        ordered: [
+          { options: { ordered: [{ passDataWith: "urlParams" }] } },
+          { pageName: "Assets" },
+        ],
+      }}
+      pluginId=""
+      type="util"
+      waitMs="0"
+      waitType="debounce"
+    />
+  </Image>
 </Frame>

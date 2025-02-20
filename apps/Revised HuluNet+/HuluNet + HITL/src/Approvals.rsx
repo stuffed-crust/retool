@@ -110,7 +110,7 @@ return data"
           id="iconText1"
           icon="bold/interface-alert-information-circle"
           style={{ ordered: [{ fontSize: "h4Font" }, { fontWeight: "700" }] }}
-          text="Tasks to Approve"
+          text="Review Orders"
           textSize="h4"
         />
       </Header>
@@ -124,6 +124,12 @@ return data"
         />
       </View>
     </Container>
+    <TextInput
+      id="textInput1"
+      label="Search Task"
+      labelPosition="top"
+      placeholder="Enter value"
+    />
     <Table
       id="table1"
       autoColumnWidth={true}
@@ -136,37 +142,27 @@ return data"
             { id: "92552" },
             { columnId: "37c1a" },
             { operator: "includes" },
-            { value: "pending" },
+            { value: "{{textInput1.value}}" },
             { disabled: false },
           ],
         },
       }}
-      defaultSelectedRow={{ mode: "index", indexType: "display", index: "" }}
+      defaultSelectedRow={{ mode: "index", indexType: "display", index: 0 }}
+      dynamicColumnProperties={{ formatByIndex: "auto" }}
       emptyMessage="No tasks exist yet. Run the workflow to create one."
       enableSaveActions={true}
+      groupByColumns={{}}
+      groupedColumnConfig={{ expandByDefault: false }}
+      heightType="auto"
+      overflowType="pagination"
       primaryKeyColumnId="c3bc1"
       rowHeight="small"
-      showBorder={true}
       showFooter={true}
       showHeader={true}
-      style={{ borderRadius: "24px" }}
+      style={{ borderRadius: "24px", rowSeparator: "rgba(255, 255, 255, 1)" }}
+      templatePageSize="5"
       toolbarPosition="bottom"
     >
-      <Column
-        id="c3bc1"
-        alignment="left"
-        editable="false"
-        editableOptions={{ showStepper: true }}
-        format="string"
-        formatOptions={{ showSeparators: true, notation: "standard" }}
-        groupAggregationMode="sum"
-        key="id"
-        label="ID"
-        placeholder="Enter value"
-        position="center"
-        size={247.359375}
-        summaryAggregationMode="none"
-      />
       <Column
         id="af236"
         alignment="left"
@@ -179,16 +175,16 @@ return data"
         placeholder="Select option"
         position="center"
         size={290.65625}
-        summaryAggregationMode="none"
         valueOverride="{{ _.startCase(item) }}"
       />
       <Column
         id="37c1a"
         alignment="left"
-        editable={false}
+        editable="false"
         format="tag"
         formatOptions={{ automaticColors: true }}
         groupAggregationMode="none"
+        hidden="true"
         key="status"
         label="Status"
         optionList={{
@@ -238,11 +234,12 @@ return data"
         format="json"
         formatOptions={{ automaticColors: true }}
         groupAggregationMode="none"
+        hidden="true"
         key="context"
-        label="Task context"
+        label="Asset Description"
         placeholder="Enter value"
-        position="center"
-        size={685.28125}
+        position="left"
+        size={572.03125}
         summaryAggregationMode="none"
         valueOverride="{{ item.description }}"
       />
@@ -251,7 +248,7 @@ return data"
         alignment="left"
         format="datetime"
         groupAggregationMode="none"
-        hidden="false"
+        hidden="true"
         key="createdAt"
         label="Created at"
         placeholder="Enter value"
@@ -270,7 +267,6 @@ return data"
         placeholder="Enter value"
         position="center"
         size={111.421875}
-        summaryAggregationMode="none"
       />
       <Column
         id="5f1e6"
@@ -283,7 +279,6 @@ return data"
         placeholder="Enter value"
         position="center"
         size={763.296875}
-        summaryAggregationMode="none"
       />
       <Column
         id="a2645"
@@ -296,7 +291,20 @@ return data"
         placeholder="Enter value"
         position="center"
         size={90.015625}
-        summaryAggregationMode="none"
+      />
+      <Column
+        id="c3bc1"
+        alignment="left"
+        editable="false"
+        editableOptions={{ showStepper: true }}
+        format="string"
+        formatOptions={{ showSeparators: true, notation: "standard" }}
+        groupAggregationMode="sum"
+        key="id"
+        label="ID"
+        placeholder="Enter value"
+        position="center"
+        size={244.453125}
       />
       <ToolbarButton
         id="1a"
@@ -335,6 +343,54 @@ return data"
         />
       </ToolbarButton>
     </Table>
+    <Container
+      id="container2"
+      footerPadding="4px 12px"
+      headerPadding="4px 12px"
+      padding="12px"
+      showBody={true}
+      showHeader={true}
+    >
+      <Header>
+        <Text id="containerTitle1" value="#### Info" verticalAlign="center" />
+      </Header>
+      <View id="b2b34" viewKey="View 1">
+        <KeyValue
+          id="keyValue1"
+          data="{
+  id: {{ table1.selectedRow.id }},
+  description:{{table1.selectedRow.context }},
+  Status: {{ table1.selectedRow.status}},
+  createdAt: {{table1.selectedRow.createdAt}} ,
+}"
+          editIcon="bold/interface-edit-pencil"
+          enableSaveActions={true}
+          groupLayout="singleColumn"
+          itemLabelPosition="top"
+          labelWrap={true}
+          style={{}}
+        >
+          <Property
+            id="id"
+            editable="false"
+            editableOptions={{}}
+            format="string"
+            formatOptions={{}}
+            hidden="false"
+            label="ID"
+          />
+          <Property
+            id="role"
+            editable="false"
+            editableOptions={{}}
+            format="string"
+            formatOptions={{}}
+            hidden="false"
+            label="Role"
+          />
+        </KeyValue>
+      </View>
+    </Container>
     <Form
       id="form1"
       footerPadding="4px 12px"
@@ -388,5 +444,10 @@ return data"
         waitType="debounce"
       />
     </Form>
+    <Text
+      id="text3"
+      value="{{ table1.selectedRow.t }}"
+      verticalAlign="center"
+    />
   </Frame>
 </Screen>
