@@ -398,6 +398,7 @@
           labels="{{ item.name }}"
           overlayMaxHeight={375}
           placeholder="Select an option"
+          required={true}
           showSelectionIndicator={true}
           value="From Existing"
           values="{{ item.type }}"

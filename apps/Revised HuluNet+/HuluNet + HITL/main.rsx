@@ -19,10 +19,10 @@
     fontIds={["a72bffde"]}
     fontMap={{
       a72bffde: {
-        name: "Ubuntu",
+        name: "Lato",
         source:
-          "https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700",
-        fontWeights: ["300", "400", "500", "700"],
+          "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900",
+        fontWeights: ["100", "300", "400", "700", "900"],
       },
     }}
     h1Font={{ size: "36px", fontWeight: "700" }}
@@ -35,8 +35,8 @@
     info="#3170f9"
     labelEmphasizedFont={{ size: "12px", fontWeight: "600" }}
     labelFont={{ size: "12px", fontWeight: "500" }}
-    primary="#3170f9"
-    secondary="#20a54e"
+    primary="#ce1ccb"
+    secondary="#cb0fd9"
     success="#059669"
     surfacePrimary="#ffffff"
     surfacePrimaryBorder=""

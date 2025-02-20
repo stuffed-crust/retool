@@ -117,6 +117,13 @@ return data"
       <View id="878f3" viewKey="View 1">
         <Text
           id="text2"
+          style={{
+            ordered: [
+              { fontSize: "labelFont" },
+              { fontWeight: "labelFont" },
+              { fontFamily: "labelFont" },
+            ],
+          }}
           value="👋 **Hello {{ current_user.firstName || 'friend' }}!** Please review and approve or deny the orders from Marketing.
 
 "
@@ -129,6 +136,7 @@ return data"
       label="Search Task"
       labelPosition="top"
       placeholder="Enter value"
+      style={{ ordered: [{ borderRadius: "20px" }] }}
     />
     <Table
       id="table1"
@@ -159,7 +167,7 @@ return data"
       rowHeight="small"
       showFooter={true}
       showHeader={true}
-      style={{ borderRadius: "24px", rowSeparator: "rgba(255, 255, 255, 1)" }}
+      style={{ rowSeparator: "rgba(255, 255, 255, 1)", borderRadius: "20px" }}
       templatePageSize="5"
       toolbarPosition="bottom"
     >
@@ -350,6 +358,7 @@ return data"
       padding="12px"
       showBody={true}
       showHeader={true}
+      style={{ ordered: [{ borderRadius: "20px" }] }}
     >
       <Header>
         <Text id="containerTitle1" value="#### Info" verticalAlign="center" />
@@ -368,7 +377,11 @@ return data"
           groupLayout="singleColumn"
           itemLabelPosition="top"
           labelWrap={true}
-          style={{}}
+          style={{
+            labelFontSize: "h5Font",
+            labelFontWeight: "h5Font",
+            labelFontFamily: "h5Font",
+          }}
         >
           <Property
             id="id"
