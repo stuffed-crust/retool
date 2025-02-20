@@ -7,16 +7,14 @@
   urlSlug=""
 >
   <SqlQueryUnified
-    id="query2"
-    functionIsSync={null}
-    query={include("../lib/query2.sql", "string")}
+    id="getAssets"
+    query={include("../lib/getAssets.sql", "string")}
     resourceDisplayName="retool_db"
     resourceName="9d12bf10-436a-415e-8f23-63bb2953ef08"
     warningCodes={[]}
   />
   <WorkflowRun
     id="startTrigger"
-    functionIsSync={null}
     isMultiplayerEdited={false}
     notificationDuration={4.5}
     resourceName="WorkflowRun"
@@ -38,7 +36,6 @@
   </WorkflowRun>
   <SqlQueryUnified
     id="getMaxId"
-    functionIsSync={null}
     query={include("../lib/getMaxId.sql", "string")}
     resourceDisplayName="retool_db"
     resourceName="9d12bf10-436a-415e-8f23-63bb2953ef08"
@@ -60,7 +57,6 @@
     chatHistory="{{ chat1.messageHistory }}"
     chatInput="{{ chat1.lastMessage }} and use assets_orders"
     defaultModelInitialized={true}
-    functionIsSync={null}
     resourceDisplayName="retool_ai"
     resourceName="retool_ai"
     vectorModeEnabled={true}
@@ -87,7 +83,7 @@
       <Header>
         <Multiselect
           id="multiselect1"
-          data="{{ query2.data }}"
+          data="{{ getAssets.data }}"
           emptyMessage="No options"
           label="Filter by Type"
           labelPosition="top"
@@ -100,7 +96,7 @@
         />
         <Multiselect
           id="multiselect2"
-          data="{{ query2.data }}"
+          data="{{ getAssets.data }}"
           emptyMessage="No options"
           label="Filter by Country"
           labelPosition="top"
@@ -115,7 +111,7 @@
             event="change"
             method="trigger"
             params={{ ordered: [] }}
-            pluginId="query2"
+            pluginId="getAssets"
             type="datasource"
             waitMs="0"
             waitType="debounce"
@@ -139,7 +135,7 @@
           actionsOverflowPosition={1}
           cellSelection="none"
           clearChangesetOnSave={true}
-          data="{{ query2.data }}"
+          data="{{ getAssets.data }}"
           defaultFilters={{
             0: {
               ordered: [
@@ -379,16 +375,6 @@
           required={true}
           value="{{ new Date() }}"
         />
-        <TextArea
-          id="textArea3"
-          autoResize={true}
-          formDataKey="status"
-          label="Status"
-          labelPosition="top"
-          minLines={2}
-          placeholder="Enter value"
-          value="{{ table2.selectedRow.status }}"
-        />
         <Select
           id="select2"
           emptyMessage="No options"
@@ -398,6 +384,7 @@
           overlayMaxHeight={375}
           placeholder="Select an option"
           showSelectionIndicator={true}
+          value="From Existing"
         >
           <Option id="e4f88" value="New" />
           <Option id="86072" value="From Existing" />
@@ -420,7 +407,7 @@
           labelPosition="top"
           minLines={2}
           placeholder="Enter value"
-          value="{{ current_user.email }}"
+          value="{{ current_user.fullName }}"
         />
       </Body>
       <Footer>
