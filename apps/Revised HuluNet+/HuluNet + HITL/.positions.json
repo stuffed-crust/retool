@@ -1,5 +1,5 @@
 {
-  "chat1": {
+  "chat": {
     "row": 0.2,
     "col": 7,
     "height": 8.2,
@@ -231,13 +231,13 @@
   },
   "textArea5": {
     "container": "form3",
-    "row": 8.2,
+    "row": 5.4,
     "height": 1,
     "width": 12
   },
   "textArea6": {
     "container": "form3",
-    "row": 9.2,
+    "row": 6.4,
     "height": 1,
     "width": 12
   },
