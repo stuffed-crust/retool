@@ -47,8 +47,18 @@
     textLight="#ffffff"
     warning="#cd6f00"
   />
-  <Include src="./src/Assets.rsx" />
   <Include src="./src/Approvals.rsx" />
+  <Include src="./src/Assets.rsx" />
   <Include src="./src/Metrics.rsx" />
+  <Include src="./src/page1.rsx" />
   <Include src="./header.rsx" />
+  <Frame
+    id="$main5"
+    enableFullBleed={false}
+    isHiddenOnDesktop={false}
+    isHiddenOnMobile={false}
+    padding="8px 12px"
+    sticky={null}
+    type="main"
+  />
 </App>
