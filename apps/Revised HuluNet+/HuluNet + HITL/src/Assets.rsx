@@ -54,12 +54,20 @@
   <RetoolAIQuery
     id="chat1_query1"
     action="chatResponseGeneration"
-    chatHistory="{{ chat1.messageHistory }}"
-    chatInput="{{ chat1.lastMessage }} and use assets_orders"
+    chatHistory="{{ chat.messageHistory }}"
+    chatInput="{{ chat.lastMessage }} and use {{ query1.data}} for context"
     defaultModelInitialized={true}
+    isMultiplayerEdited={false}
     resourceDisplayName="retool_ai"
     resourceName="retool_ai"
     vectorModeEnabled={true}
+  />
+  <SqlQueryUnified
+    id="query1"
+    query={include("../lib/query1.sql", "string")}
+    resourceDisplayName="retool_db"
+    resourceName="9d12bf10-436a-415e-8f23-63bb2953ef08"
+    warningCodes={[]}
   />
   <Frame
     id="$main2"
@@ -444,7 +452,7 @@
       />
     </Form>
     <Chat
-      id="chat1"
+      id="chat"
       _actionDisabled={{ ordered: [{ "1a": "" }] }}
       _actionHidden={{ ordered: [{ "1a": "" }] }}
       _actionIcon={{ ordered: [{ "1a": "line/interface-align-front" }] }}
@@ -467,13 +475,13 @@
         ordered: [{ "2b": "download" }, { "3c": "clearHistory" }],
       }}
       _sessionStorageId="57aab9d8-3381-43a5-b3ca-acc2b0884440"
-      assistantName="Retool AI"
+      assistantName="Hulu AI"
       avatarFallback="{{ current_user.fullName }}"
       avatarImageSize={32}
       avatarSrc="{{ current_user.profilePhotoUrl }}"
       emptyDescription="Send a message to chat with AI"
       emptyTitle="No messages here yet"
-      placeholder="Type a message"
+      placeholder="Talk to me"
       queryTargetId="chat1_query1"
       showAvatar={true}
       showEmptyState={true}
