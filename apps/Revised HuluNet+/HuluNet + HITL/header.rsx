@@ -23,6 +23,7 @@
       icon="bold/interface-home-3"
       iconPosition="left"
       itemType="page"
+      key="3ce54"
       label="Assets"
       screenTargetId="Assets"
     />
@@ -44,6 +45,15 @@
       key="73dad"
       label="Metrics"
       screenTargetId="Metrics"
+    />
+    <Option
+      id="fd1b0"
+      disabled={false}
+      hidden={false}
+      iconPosition="left"
+      itemType="page"
+      label="Hulu AI"
+      screenTargetId="Hulu_CoPilot"
     />
     <Event
       event="click"

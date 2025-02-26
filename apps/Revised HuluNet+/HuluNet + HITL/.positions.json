@@ -1,9 +1,17 @@
 {
-  "chat": {
-    "row": 25.4,
-    "col": 1,
-    "height": 8.2,
-    "width": 5
+  "chat2": {
+    "container": "container3",
+    "subcontainer": "93394",
+    "height": 9.2,
+    "width": 12,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
   },
   "container1": {
     "height": 0.2,
@@ -31,8 +39,27 @@
       }
     }
   },
+  "container3": {
+    "row": 0.6,
+    "height": 0.2,
+    "width": 10,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
   "containerTitle1": {
     "container": "container2",
+    "rowGroup": "header",
+    "height": 0.6,
+    "width": 12
+  },
+  "containerTitle2": {
+    "container": "container3",
     "rowGroup": "header",
     "height": 0.6,
     "width": 12
@@ -223,7 +250,7 @@
     "width": 8
   },
   "table5": {
-    "row": 16.2,
+    "row": 1,
     "col": 7,
     "height": 8,
     "width": 5
@@ -268,5 +295,11 @@
     "row": 0.2,
     "height": 0.2,
     "width": 6
+  },
+  "textInput2": {
+    "row": 0.8,
+    "col": 7,
+    "height": 0.2,
+    "width": 4
   }
 }
