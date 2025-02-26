@@ -313,7 +313,7 @@ return data"
         label="ID"
         placeholder="Enter value"
         position="center"
-        size={247.125}
+        size={245}
       />
       <ToolbarButton
         id="1a"

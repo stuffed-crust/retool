@@ -235,13 +235,19 @@
           <Column
             id="13446"
             alignment="left"
-            format="link"
-            formatOptions={{ showUnderline: "hover" }}
+            format="image"
+            formatOptions={{
+              showUnderline: "hover",
+              underlineStyle: "solid",
+              widthType: "fit",
+            }}
             groupAggregationMode="none"
             key="media"
             label="Media"
+            placeholder="Enter value"
             position="center"
             size={100}
+            summaryAggregationMode="none"
           >
             <Event
               event="clickCell"
@@ -358,6 +364,7 @@
           currency="USD"
           disabled="true"
           formDataKey="id"
+          hidden="true"
           inputValue={0}
           label="Id"
           labelPosition="top"

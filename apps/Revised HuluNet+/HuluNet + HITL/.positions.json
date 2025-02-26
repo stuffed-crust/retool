@@ -153,7 +153,15 @@
     "container": "container2",
     "subcontainer": "b2b34",
     "height": 8.6,
-    "width": 12
+    "width": 11,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
   },
   "lineChart1": {
     "row": 4.2,
