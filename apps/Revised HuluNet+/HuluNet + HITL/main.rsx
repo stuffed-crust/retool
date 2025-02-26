@@ -47,10 +47,11 @@
     textLight="#ffffff"
     warning="#cd6f00"
   />
-  <Include src="./src/Approvals.rsx" />
   <Include src="./src/Assets.rsx" />
+  <Include src="./src/Approvals.rsx" />
   <Include src="./src/Metrics.rsx" />
   <Include src="./src/page1.rsx" />
+  <Include src="./src/Hulu_CoPilot.rsx" />
   <Include src="./header.rsx" />
   <Frame
     id="$main5"
