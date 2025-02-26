@@ -3,6 +3,7 @@
   _customShortcuts={[]}
   _hashParams={[]}
   _searchParams={[]}
+  browserTitle=""
   title={null}
   urlSlug=""
 >
@@ -65,6 +66,22 @@
   <SqlQueryUnified
     id="query1"
     query={include("../lib/query1.sql", "string")}
+    resourceDisplayName="retool_db"
+    resourceName="9d12bf10-436a-415e-8f23-63bb2953ef08"
+    warningCodes={[]}
+  />
+  <SqlQueryUnified
+    id="query6"
+    notificationDuration={4.5}
+    resourceDisplayName="retool_db"
+    resourceName="9d12bf10-436a-415e-8f23-63bb2953ef08"
+    showSuccessToaster={false}
+    showUpdateSetValueDynamicallyToggle={false}
+    updateSetValueDynamically={true}
+  />
+  <SqlQueryUnified
+    id="query7"
+    query={include("../lib/query7.sql", "string")}
     resourceDisplayName="retool_db"
     resourceName="9d12bf10-436a-415e-8f23-63bb2953ef08"
     warningCodes={[]}
@@ -167,8 +184,10 @@
           defaultSelectedRow={{ mode: "index", indexType: "display", index: 0 }}
           emptyMessage="No rows found"
           enableSaveActions={true}
+          groupByColumns={{}}
           heightType="auto"
           linkedFilterId=""
+          overflowType="pagination"
           primaryKeyColumnId="8448a"
           rowHeight="medium"
           showFooter={true}
@@ -188,7 +207,6 @@
             placeholder="Enter value"
             position="center"
             size={100}
-            summaryAggregationMode="none"
           />
           <Column
             id="03934"
@@ -200,7 +218,6 @@
             placeholder="Enter value"
             position="center"
             size={100}
-            summaryAggregationMode="none"
           />
           <Column
             id="4c4bf"
@@ -213,7 +230,6 @@
             placeholder="Select option"
             position="center"
             size={100}
-            summaryAggregationMode="none"
             valueOverride="{{ _.startCase(item) }}"
           />
           <Column
@@ -226,7 +242,6 @@
             label="Media"
             position="center"
             size={100}
-            summaryAggregationMode="none"
           >
             <Event
               event="clickCell"
@@ -248,7 +263,6 @@
             placeholder="Enter value"
             position="center"
             size={430}
-            summaryAggregationMode="none"
           />
           <Column
             id="86dd4"
@@ -261,7 +275,6 @@
             placeholder="Select option"
             position="center"
             size={165}
-            summaryAggregationMode="none"
             valueOverride="{{ _.startCase(item) }}"
           />
           <Column
@@ -275,7 +288,6 @@
             placeholder="Select option"
             position="center"
             size={161}
-            summaryAggregationMode="none"
             valueOverride="{{ _.startCase(item) }}"
           />
           <Column
@@ -290,7 +302,6 @@
             placeholder="Enter value"
             position="center"
             size={100}
-            summaryAggregationMode="none"
           />
           <Action id="802df" icon="bold/interface-edit-pencil" label="Action 1">
             <Event
@@ -339,11 +350,7 @@
       styleContext={{ ordered: [{ borderRadius: "24px" }] }}
     >
       <Header>
-        <Text
-          id="formTitle3"
-          value="#### Submit a new order"
-          verticalAlign="center"
-        />
+        <Text id="formTitle3" value="#### Place Order" verticalAlign="center" />
       </Header>
       <Body>
         <NumberInput
@@ -451,6 +458,164 @@
         waitType="debounce"
       />
     </Form>
+    <Text id="text4" value="#### Ordered Assets ###" verticalAlign="center" />
+    <Table
+      id="table5"
+      cellSelection="none"
+      clearChangesetOnSave={true}
+      data="{{ query7.data }}"
+      defaultSelectedRow={{ mode: "index", indexType: "display", index: 0 }}
+      emptyMessage="No rows found"
+      enableSaveActions={true}
+      primaryKeyColumnId="ab9d0"
+      showBorder={true}
+      showFooter={true}
+      showHeader={true}
+      toolbarPosition="bottom"
+    >
+      <Column
+        id="ab9d0"
+        alignment="right"
+        editableOptions={{ showStepper: true }}
+        format="decimal"
+        formatOptions={{ showSeparators: true, notation: "standard" }}
+        groupAggregationMode="sum"
+        key="id"
+        label="ID"
+        placeholder="Enter value"
+        position="center"
+        size={100}
+        summaryAggregationMode="none"
+      />
+      <Column
+        id="cd5a3"
+        alignment="left"
+        format="tag"
+        formatOptions={{ automaticColors: true }}
+        groupAggregationMode="none"
+        key="order_type"
+        label="Order type"
+        placeholder="Select option"
+        position="center"
+        size={100}
+        summaryAggregationMode="none"
+        valueOverride="{{ _.startCase(item) }}"
+      />
+      <Column
+        id="55ced"
+        alignment="left"
+        format="datetime"
+        groupAggregationMode="none"
+        key="date"
+        label="Date"
+        placeholder="Enter value"
+        position="center"
+        size={100}
+        summaryAggregationMode="none"
+      />
+      <Column
+        id="624b5"
+        alignment="left"
+        format="tag"
+        formatOptions={{ automaticColors: true }}
+        groupAggregationMode="none"
+        key="ordered_by"
+        label="Ordered by"
+        placeholder="Select option"
+        position="center"
+        size={100}
+        summaryAggregationMode="none"
+        valueOverride="{{ _.startCase(item) }}"
+      />
+      <Column
+        id="b7947"
+        alignment="left"
+        format="string"
+        groupAggregationMode="none"
+        key="description"
+        label="Description"
+        placeholder="Enter value"
+        position="center"
+        size={100}
+        summaryAggregationMode="none"
+      />
+      <Column
+        id="e53e2"
+        alignment="left"
+        format="tag"
+        formatOptions={{ automaticColors: true }}
+        groupAggregationMode="none"
+        key="status"
+        label="Status"
+        placeholder="Select option"
+        position="center"
+        size={100}
+        summaryAggregationMode="none"
+        valueOverride="{{ _.startCase(item) }}"
+      />
+      <Column
+        id="7b430"
+        alignment="left"
+        format="date"
+        groupAggregationMode="none"
+        key="deadline"
+        label="Deadline"
+        placeholder="Enter value"
+        position="center"
+        size={100}
+        summaryAggregationMode="none"
+      />
+      <Column
+        id="90e40"
+        alignment="right"
+        editableOptions={{ showStepper: true }}
+        format="decimal"
+        formatOptions={{ showSeparators: true, notation: "standard" }}
+        groupAggregationMode="sum"
+        key="asset_id"
+        label="Asset ID"
+        placeholder="Enter value"
+        position="center"
+        size={100}
+        summaryAggregationMode="none"
+      />
+      <ToolbarButton
+        id="1a"
+        icon="bold/interface-text-formatting-filter-2"
+        label="Filter"
+        type="filter"
+      />
+      <ToolbarButton
+        id="3c"
+        icon="bold/interface-download-button-2"
+        label="Download"
+        type="custom"
+      >
+        <Event
+          event="clickToolbar"
+          method="exportData"
+          pluginId="table5"
+          type="widget"
+          waitMs="0"
+          waitType="debounce"
+        />
+      </ToolbarButton>
+      <ToolbarButton
+        id="4d"
+        icon="bold/interface-arrows-round-left"
+        label="Refresh"
+        type="custom"
+      >
+        <Event
+          event="clickToolbar"
+          method="refresh"
+          pluginId="table5"
+          type="widget"
+          waitMs="0"
+          waitType="debounce"
+        />
+      </ToolbarButton>
+    </Table>
     <Chat
       id="chat"
       _actionDisabled={{ ordered: [{ "1a": "" }] }}

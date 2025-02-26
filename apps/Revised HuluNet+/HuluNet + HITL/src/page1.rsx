@@ -3,6 +3,7 @@
   _customShortcuts={[]}
   _hashParams={[]}
   _searchParams={[]}
+  browserTitle=""
   title={null}
   urlSlug=""
 >
@@ -25,6 +26,13 @@
     warningCodes={[]}
   />
   <connectResource id="query4" _componentId="table4" />
+  <SqlQueryUnified
+    id="query5"
+    query={include("../lib/query5.sql", "string")}
+    resourceDisplayName="retool_db"
+    resourceName="9d12bf10-436a-415e-8f23-63bb2953ef08"
+    warningCodes={[]}
+  />
   <Frame
     id="$main4"
     enableFullBleed={false}
@@ -42,6 +50,7 @@
       defaultSelectedRow={{ mode: "index", indexType: "display", index: 0 }}
       emptyMessage="No rows found"
       enableSaveActions={true}
+      primaryKeyColumnId="bf28b"
       rowHeight="small"
       showBorder={true}
       showFooter={true}
@@ -51,6 +60,7 @@
       <Column
         id="bf28b"
         alignment="right"
+        editable={false}
         editableOptions={{ showStepper: true }}
         format="decimal"
         formatOptions={{ showSeparators: true, notation: "standard" }}

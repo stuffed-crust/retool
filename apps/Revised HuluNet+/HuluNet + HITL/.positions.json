@@ -1,7 +1,7 @@
 {
   "chat": {
-    "row": 0.2,
-    "col": 7,
+    "row": 25.4,
+    "col": 1,
     "height": 8.2,
     "width": 5
   },
@@ -222,6 +222,12 @@
     "height": 8,
     "width": 8
   },
+  "table5": {
+    "row": 16.2,
+    "col": 7,
+    "height": 8,
+    "width": 5
+  },
   "tabs1": {
     "container": "tabbedContainer1",
     "rowGroup": "header",
@@ -239,6 +245,11 @@
   "text3": {
     "row": 7.8,
     "col": 8,
+    "height": 0.6
+  },
+  "text4": {
+    "row": 0.2,
+    "col": 7,
     "height": 0.6
   },
   "textArea5": {

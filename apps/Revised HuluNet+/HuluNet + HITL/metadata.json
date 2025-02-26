@@ -18,13 +18,16 @@
         "page1": {
           "array": []
         },
-        "page2": {
+        "Home": {
+          "array": []
+        },
+        "Hulu_CoPilot": {
           "array": []
         }
       }
     },
     "rootScreen": "Assets",
-    "version": "3.157.0",
+    "version": "3.160.0",
     "experimentalDataTabEnabled": true
   }
 }

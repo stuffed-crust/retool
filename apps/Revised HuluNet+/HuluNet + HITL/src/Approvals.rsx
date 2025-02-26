@@ -3,6 +3,7 @@
   _customShortcuts={[]}
   _hashParams={[]}
   _searchParams={[]}
+  browserTitle=""
   title="Approvals"
   urlSlug=""
 >
@@ -312,7 +313,7 @@ return data"
         label="ID"
         placeholder="Enter value"
         position="center"
-        size={249.4375}
+        size={251.828125}
       />
       <ToolbarButton
         id="1a"
