@@ -73,7 +73,7 @@
             ordered: [{ "2b": "download" }, { "3c": "clearHistory" }],
           }}
           _sessionStorageId="8ee6eeae-cb36-450e-a0b2-54c3617b5f7b"
-          assistantName="Retool AI"
+          assistantName="Hulu AI"
           avatarFallback="{{ current_user.fullName }}"
           avatarImageSize={32}
           avatarSrc="{{ current_user.profilePhotoUrl }}"
